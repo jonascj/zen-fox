@@ -9,7 +9,9 @@ there is room for improvements.
 What use is this? Use it to toggle the color scheme from an external
 script.
 
-***Setup***
+
+**Setup**
+
 For the external application toggling to work
 a few things must be configured:
 
@@ -24,7 +26,9 @@ sensible and have the execute permission set (`chmod +x`).
 this line `"path": "/absolute/path/to/zen_fox_toggle_light_dark.py"`
 must be changed to reflect the path on your system.
 
-***Trying it out***
+
+**Trying it out**
+
 So far I've only tried my modified version of the add-on
 by opening `about:debugging` in Firefox,
 choosing [Load Temporary Add-on],
@@ -68,7 +72,7 @@ Also, you can now choose the accent color, that is used for your tab line, tab l
 * [Solarized theme repo](https://github.com/altercation/ethanschoonover.com/tree/master/projects/solarized)
 
 ## Installation
-From [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/zen-fox/). Alternatively, see dev instructions:
+~~From [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/zen-fox/). Alternatively, see dev instructions:~~
 
 ## Dev
 1. Donwload repo as zip, 
