@@ -1,0 +1,7 @@
+{
+  "name": "zen_fox_toggle_light_dark",
+  "description": "Make Zen Fox change between light/dark on linux signal",
+  "path": "/absolute/path/to/zen_fox_toggle_light_dark.py",
+  "type": "stdio",
+  "allowed_extensions": [ "zen_fox@jonascj.dk" ]
+}

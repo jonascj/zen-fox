@@ -6,7 +6,8 @@
   "permissions": [
     "storage",
     "theme",
-    "alarms"
+    "alarms",
+    "nativeMessaging"
   ],
   "background": {
     "scripts": ["zenfox.js"]
@@ -26,6 +27,7 @@
   "version": "1.8.5",
   "applications": {
     "gecko": {
+      "id": "zen_fox@jonascj.dk",
       "strict_min_version": "60.0"
     }
   }

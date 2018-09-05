@@ -219,6 +219,19 @@ function apply() {
   methodHandler();
 }
 
+
+///////////////////////////// MESSAGING /////////////////////////////////////
+var port = browser.runtime.connectNative("zen_fox_toggle_light_dark");
+
+port.onMessage.addListener((msg) => {
+    console.log("message received: " + msg);
+    manualMethod()
+});
+
+
+    
+
+
 apply();
 openSettings();
 browser.runtime.onMessage.addListener(apply);

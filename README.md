@@ -1,3 +1,43 @@
+# Fork notes
+This fork allows toggling between the light and dark color scheme,
+on *nix systems,
+with the command `pkill -USR1 -f "python.+zen_fox_toggle_light_dark.py"`.
+
+At this point it is a very crude (proof of concept) implementation, 
+there is room for improvements.
+
+What use is this? Use it to toggle the color scheme from an external
+script.
+
+***Setup***
+For the external application toggling to work
+a few things must be configured:
+
+1. `zen_fox_toggle_light_dark.json` must be placed in 
+`~/.mozilla/natie-messaging-hosts/`
+(a symlink will do nicely).
+
+2. `zen_fox_toggle_light_dark.py` must be placed somewhere
+sensible and have the execute permission set (`chmod +x`).
+
+3. In file `zen_fox_toggle_light_dark.json` 
+this line `"path": "/absolute/path/to/zen_fox_toggle_light_dark.py"`
+must be changed to reflect the path on your system.
+
+***Trying it out***
+So far I've only tried my modified version of the add-on
+by opening `about:debugging` in Firefox,
+choosing [Load Temporary Add-on],
+and selecting/opening `manifest.json`.
+
+With the add-on loaded temporarily, open a terminal 
+and issue the command `pkill -USR1 -f "python.+zen_fox_toggle_light_dark.py"`.
+
+This will send a USR1 signal to the Python script,
+which it will detect and in turn, it willsend a message
+to the Zen Fox extension, telling it to toggle the colors.
+
+
 # Zen Fox
 
 As we spend more and more of our lives computing, and more and more of our computing is done on the browser, our browser being the awesome Firefox — it must be themed appropriately for its heavy duty.
@@ -20,6 +60,7 @@ Also, you can now choose the accent color, that is used for your tab line, tab l
 * Alarm — to set internal timers that check for weather/time updates
 * Storage — to store your settings 
 * Theme — to… theme
+* nativeMessaging - to allow external application to toggle theme colors
 
 ## Solarized References
 * [Solarized theme website](http://ethanschoonover.com/solarized)
